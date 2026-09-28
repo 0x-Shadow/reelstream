@@ -145,16 +145,22 @@ A few things learned while building this that are easy to get wrong:
 | `npm start` | Start the dev server |
 | `npm run build` | Create an optimised production build |
 | `npm test` | Run the test suite |
-| `npm run deploy` | Build and publish to GitHub Pages |
 
 ## Deployment
 
-The project is published with GitHub Pages. To deploy your own fork, update the `homepage`
-field in `package.json` to your repository URL, then:
+The live site is published automatically by GitHub Actions. Every push to `main` runs
+`.github/workflows/deploy.yml`, which builds the app and publishes it to GitHub Pages.
 
-```bash
-npm run deploy
-```
+The TMDb token is supplied at build time from a repository secret, so it is never stored in
+the code. To set up a fork:
+
+1. Create a repository secret named `TMDB_READ_TOKEN` under **Settings → Secrets and
+   variables → Actions**.
+2. Update the `homepage` field in `package.json` to your own repository URL so the asset
+   paths resolve correctly.
+3. Enable Pages with **Source: GitHub Actions** under **Settings → Pages**.
+
+A normal `npm run build` works too — it just needs the token in your local `.env`.
 
 ## Credits
 
