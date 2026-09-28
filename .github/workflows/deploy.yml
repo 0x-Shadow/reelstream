@@ -35,6 +35,9 @@ jobs:
           REACT_APP_TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
 
       - uses: actions/configure-pages@v5
+        with:
+          # Enables Pages on first run, so forks work without manual setup.
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
