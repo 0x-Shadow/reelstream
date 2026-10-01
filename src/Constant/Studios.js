@@ -17,8 +17,8 @@ export const COMPANIES = {
 const STUDIOS = [
   {
     id: 1,
-    slug: "animation-family",
-    name: "Animation & Family",
+    slug: "disney",
+    name: "Disney",
     blurb: "Animation, live action and everything in between.",
     accent: "from-sky-500 to-indigo-600",
     companies: [COMPANIES.waltDisneyAnimation, COMPANIES.waltDisneyPictures],

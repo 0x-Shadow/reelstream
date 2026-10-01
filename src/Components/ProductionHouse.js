@@ -3,9 +3,9 @@ import STUDIOS from "../Constant/Studios";
 
 function ProductionHouse({ onOpenStudio }) {
   return (
-    <section aria-label="Collections" className="px-4 pt-12 sm:px-5 md:px-16 md:pt-16">
+    <section aria-label="Studio collections" className="px-4 pt-12 sm:px-5 md:px-16 md:pt-16">
       <h2 className="mb-4 text-lg font-bold tracking-tight text-white md:mb-5 md:text-xl">
-        Explore collections
+        Explore by studio
       </h2>
 
       <div className="grid grid-cols-2 gap-2.5 sm:gap-3 md:gap-4 lg:grid-cols-5">

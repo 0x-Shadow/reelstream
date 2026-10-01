@@ -39,7 +39,7 @@ function StudioPage({ slug, onOpen, onPlay }) {
   if (!studio) {
     return (
       <div className="px-4 py-24 text-center sm:px-5 md:px-16">
-        <h1 className="text-2xl font-black text-white">Collection not found</h1>
+        <h1 className="text-2xl font-black text-white">Studio not found</h1>
         <p className="mt-2 text-sm text-slate-400">That collection does not exist.</p>
       </div>
     );
@@ -47,7 +47,7 @@ function StudioPage({ slug, onOpen, onPlay }) {
 
   return (
     <div className="px-4 pt-8 sm:px-5 md:px-16 md:pt-12">
-      <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-sky-400">Collection</p>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-sky-400">Studio</p>
       <h1 className="mt-2 text-2xl font-black tracking-tight text-white md:text-4xl">
         {studio.name}
       </h1>
