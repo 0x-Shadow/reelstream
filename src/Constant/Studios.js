@@ -1,7 +1,21 @@
-// ReelStream collections — neutral catalogue groupings powered by TMDB
-// company / network filters. No studio artwork is shipped with the app;
-// tiles render as styled text so nothing trademarked is distributed.
+const STUDIO_LOGOS = {
+  disney: "disney",
+  pixar: "pixar",
+  marvel: "marvel",
+  "star-wars": "starwar",
+  "national-geographic": "nationalG",
+};
+
+const STUDIO_VIDEOS = {
+  disney: "disney",
+  pixar: "pixar",
+  marvel: "marvel",
+  "star-wars": "star-wars",
+  "national-geographic": "national-geographic",
+};
+
 export const NETWORKS = {
+  disneyPlus: 2739,
   flagship: 2739,
   nationalGeographic: 43,
 };
@@ -20,16 +34,18 @@ const STUDIOS = [
     slug: "disney",
     name: "Disney",
     blurb: "Animation, live action and everything in between.",
-    accent: "from-sky-500 to-indigo-600",
+    logo: STUDIO_LOGOS.disney,
+    video: STUDIO_VIDEOS.disney,
     companies: [COMPANIES.waltDisneyAnimation, COMPANIES.waltDisneyPictures],
-    networks: [NETWORKS.flagship],
+    networks: [NETWORKS.disneyPlus],
   },
   {
     id: 2,
     slug: "pixar",
     name: "Pixar",
     blurb: "Toy Story, Inside Out, Coco and the rest of the family.",
-    accent: "from-amber-500 to-orange-600",
+    logo: STUDIO_LOGOS.pixar,
+    video: STUDIO_VIDEOS.pixar,
     companies: [COMPANIES.pixar],
     networks: [],
   },
@@ -38,7 +54,8 @@ const STUDIOS = [
     slug: "marvel",
     name: "Marvel",
     blurb: "The MCU, from the first iron suit to the multiverse.",
-    accent: "from-red-600 to-rose-800",
+    logo: STUDIO_LOGOS.marvel,
+    video: STUDIO_VIDEOS.marvel,
     companies: [COMPANIES.marvel],
     networks: [],
   },
@@ -47,16 +64,18 @@ const STUDIOS = [
     slug: "star-wars",
     name: "Star Wars",
     blurb: "A long time ago in a galaxy far, far away.",
-    accent: "from-yellow-400 to-amber-700",
+    logo: STUDIO_LOGOS["star-wars"],
+    video: STUDIO_VIDEOS["star-wars"],
     companies: [COMPANIES.lucasfilm],
-    networks: [NETWORKS.flagship],
+    networks: [NETWORKS.disneyPlus],
   },
   {
     id: 5,
     slug: "national-geographic",
     name: "National Geographic",
     blurb: "Documentaries, wildlife and real-world science.",
-    accent: "from-emerald-500 to-teal-700",
+    logo: STUDIO_LOGOS["national-geographic"],
+    video: STUDIO_VIDEOS["national-geographic"],
     companies: [],
     networks: [NETWORKS.nationalGeographic],
   },
