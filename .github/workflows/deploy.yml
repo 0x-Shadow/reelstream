@@ -35,9 +35,10 @@ jobs:
           REACT_APP_TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
 
       - uses: actions/configure-pages@v5
-        with:
-          # Enables Pages on first run, so forks work without manual setup.
-          enablement: true
+        # No `enablement: true`: creating the Pages site needs repo admin and
+        # fails the job with "Resource not accessible by integration" when the
+        # site doesn't exist yet. Enable Pages once in Settings → Pages
+        # (Source: GitHub Actions); afterwards this step just validates.
 
       - uses: actions/upload-pages-artifact@v3
         with:

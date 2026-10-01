@@ -7,14 +7,14 @@ import Footer from "../Components/Footer";
 import { dedupe, normalizeList } from "../utils/media";
 
 const SOURCES = [
-  { id: "disney-plus", label: "Disney+ series", networks: [NETWORKS.disneyPlus] },
+  { id: "exclusive-series", label: "Exclusive series", networks: [NETWORKS.flagship] },
   { id: "marvel", label: "Marvel films", companies: [COMPANIES.marvel] },
   { id: "star-wars", label: "Star Wars", companies: [COMPANIES.lucasfilm] },
   { id: "pixar", label: "Pixar", companies: [COMPANIES.pixar] },
 ];
 
 function Originals({ onOpen, onPlay }) {
-  const [active, setActive] = useState("disney-plus");
+  const [active, setActive] = useState("exclusive-series");
   const [items, setItems] = useState([]);
   const [status, setStatus] = useState("loading");
 
@@ -52,13 +52,13 @@ function Originals({ onOpen, onPlay }) {
     <div className="pt-8 md:pt-12">
       <div className="px-4 sm:px-5 md:px-16">
         <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-sky-400">
-          Disney exclusives
+          Streaming exclusives
         </p>
         <h1 className="mt-2 text-2xl font-black tracking-tight text-white md:text-3xl">
           Originals
         </h1>
         <p className="mt-1 max-w-2xl text-sm text-slate-400">
-          Titles that belong to the house — pick a collection to narrow it down.
+          Hand-picked collections from across the catalogue — pick one to narrow it down.
         </p>
 
         <div className="mt-5 flex flex-wrap gap-2">
@@ -92,7 +92,7 @@ function Originals({ onOpen, onPlay }) {
       <div className="mt-10">
         <MediaRow
           title="Also trending in series"
-          fetcher={() => GlobalApi.getTv({ with_networks: NETWORKS.disneyPlus })}
+          fetcher={() => GlobalApi.getTv({ with_networks: NETWORKS.flagship })}
           onOpen={onOpen}
           onPlay={onPlay}
         />

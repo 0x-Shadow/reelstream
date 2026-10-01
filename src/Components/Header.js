@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import logo from "./../assets/Images/logo.png";
+import logo from "./../assets/Images/logo.svg";
 import {
   HiBars3,
   HiHome,
@@ -60,10 +60,10 @@ function Header({ path, onNavigate }) {
         <button
           type="button"
           onClick={() => go("/")}
-          aria-label="Disney+ Hotstar home"
+          aria-label="ReelStream home"
           className="shrink-0 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
         >
-          <img src={logo} alt="Disney+ Hotstar" className="h-6 w-auto md:h-9" />
+          <img src={logo} alt="ReelStream" className="h-6 w-auto md:h-9" />
         </button>
 
         <nav aria-label="Primary" className="hidden items-center gap-5 lg:flex xl:gap-7">
